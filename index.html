@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS3-animated-sliding-box-without-javascript</title>
+<style type="text/css">
+	@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0 none;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;  
+}
+ol, ul {
+    list-style: none outside none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Фон */
+body {
+	background-color: #30303A;
+}
+
+input#toggle + label i.toggle-icon:before {
+  font-family: 'entypo', sans-serif;
+  content: "\e764";
+}
+
+input#toggle:checked + label i.toggle-icon:before {
+  content: "\e767";
+}
+
+.slider input#toggle {
+  display: none;
+}
+
+.slider input#toggle + label {
+  font-size: 25px;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  background: #8f2c2c;
+  position: relative;
+  top: 0;
+  transition: top 0.5s ease-in-out;
+}
+
+.slider {
+  width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.slider .main-content {
+  background: #eee;
+  height: 150px;
+  position: relative;
+  top: -195px;
+  transition: top 0.5s ease-in-out;
+}
+
+.slider .main-content h1 {
+  line-height: 150px;
+  color: #30303f;
+  width: 100%;
+  text-stroke: 1px;
+  font-size: 30px;
+  text-shadow: 0 1px 1px #000;
+  font-family: sans-serif;
+}
+input#toggle:checked + label {
+  top: 150px;
+}
+
+input#toggle:checked ~ .main-content {
+  top: -45px;
+}
+</style>
+</head>
+<body>
+<!-- Контейнер для выпадающего блока -->
+<section class="slider">
+
+  <!-- Чекбокс -->
+  <input type="checkbox" id="toggle">
+ <!-- label для кнопки -->
+  <label for="toggle">
+    <!-- Иконка стрелки для кнопки из веб-шрифта entypo. Здесь может быть ваша другая иконка -->
+    <i class="toggle-icon"></i>
+  </label>
+
+  <!-- Контент для выпадающего блока -->
+  <section class="main-content">
+    <h1>CSS3 Drop down box</h1>
+  </section>
+
+</section>
+</body>
+</html>
